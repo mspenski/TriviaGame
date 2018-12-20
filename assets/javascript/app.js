@@ -1,51 +1,68 @@
-$(document).ready(function () {
-    var options = [
+
+// if buttonactive === answer, correct. else if no button active, unanswered. else,  incorrect
+
+function() {
+    var myQuestions = [
         {
-            question: "Pupusas, handmade thick stuffed corn tortillas, are a traditional dish from what country?", 
-            choice: ["Ethiopia", "El Salvadore", "Peru", "Guatamala"],
-            answer: 1,
-            photo: "assets/images/pupusas.jpg"
-         },
-         {
-             question: "What popular soda beverage was originally developed as a mixer for whiskey?", 
-            choice: ["Mountain Dew", "Sprite", "7-UP", "Coke"],
-            answer: 0,
-            photo: "assets/images/mtdew.gif"
-         }, 
-         {
-             question: "Kopi luwak is a very expensive type of what?", 
-            choice: ["Spice", "Caviar", "Coffee", "Rice variety" ],
-            answer: 2,
-            photo: "assets/images/coffee.gif"
-        }, 
+            question: "Who is considered to be the greatest baseball player of all-time?",
+            answers: {
+                a: "Randy Johnson",
+                b: "Babe Ruth",
+                c: "Barry Bonds",
+                d: "Chipper Jones"
+            },
+            correctAnswer: "b"
+        },
         {
-            question: "Which is not an ingredient in a Harvey Wallbanger cocktail?", 
-            choice: ["Orange Juice", "Vodka", "Sour Mix", "Galliano" ],
-            answer: 2,
-            photo: "assets/images/harvey.jpg"
-        }, 
+            question: "What is the name of the Super Bowl trophy?",
+            answers: {
+                a: "The NFL Trophy",
+                b: "The Madden Trophy",
+                c: "The Lombardi Trophy",
+                d: "The Panther's Trophy"
+            },
+            correctAnswer: "c"
+        },
         {
-            question: "How many items are there in a Bakers' Dozen?", 
-            choice: ["12", "6", "24", "13" ],
-            answer: 3,
-            photo: "assets/images/dozen.jpg"
-        }, 
+            question: "How many innings are in a standard game of Major League Baseball",
+            answers: {
+                a: "4",
+                b: "7",
+                c: "9",
+                d: "12",
+            },
+            correctAnswer: "c",
         {
-            question: "What is the most widely eaten fish in the world?", 
-            choice: ["Tilapia", "Herring", "Sardine", "Tuna" ],
-            answer: 1,
-            photo: "assets/images/herring.jpg"
-        }, 
+            question: "'Football' in England, refers to which US sport?",
+            answers: {
+                a: "Football",
+                b: "Rugby",
+                c: "Kickball",
+                d: "Soccer"
+            },
+            correctAnswer: "d"
+        },
         {
-            question: "Which fruit does not ripen once it has been picked?", 
-            choice: ["Banana", "Lemon", "Mango", "Apple" ],
-            answer: 1,
-            photo: "assets/images/lemon.gif"
-        }, 
+            question: "",
+            answers: {
+                a: "",
+                b: "",
+                c: "",
+                d: ""
+            },
+            correctAnswer: ""
+        },
         {
-            question: "Which fruit contains the most protein per 100 calories?", 
-            choice: ["Guava", "Avocado", "Banana", "Blackberries" ],
-            answer: 0,
-            photo: "assets/images/guava.gif"
-        }];
-})
+            question: "",
+            answers: {
+                a: "",
+                b: "",
+                c: "",
+                d: ""
+            },
+            correctAnswer: ""
+        },
+        
+
+
+    $(document).ready(function () {
