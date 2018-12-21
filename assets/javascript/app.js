@@ -4,9 +4,11 @@
 //create functions for start game(onClick), submit button (onClick), restart (onClick),  
 
 
-
-
+//variable to reset timer on restart
+var timerReset = 60;
 var time = 6000;
+// variable for collecting which radio buttons were active when the submit button is hit or the timer hits zero
+var userChoice
 var questionsRight
 var questionsWrong
 var questionsIncomplete
@@ -92,7 +94,38 @@ var myQuestions = [
             d: "Charlotte Knights"
         },
         correctAnswer: "b"
-    }];
+    },
+    {
+        question: "The mascot of East Carolina University is what?",
+        answers: {
+            a: "Pirate",
+            b: "Wolf",
+            c: "Ram",
+            d: "Catamount"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "The NCAA Division I College Football Playoff is composed of how many teams",
+        answers: {
+            a: "4",
+            b: "16",
+            c: "8",
+            d: "24"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Which college football bowl game is nicknamed, 'The Grandaddy of Them All'?",
+        answers: {
+            a: "The Peach Bowl",
+            b: "The Orange Bowl",
+            c: "The Rose Bowl",
+            d: "The Cotton Bowl"
+        },
+        correctAnswer: "c"
+    }
+];
 
 // *******FUNCTIONS********
 
@@ -109,9 +142,18 @@ function startGame() {
         $("#quiz").append("<input type='radio' name='" + i +  "' value='b'> " + myQuestions[i].answers.b + "<br>");
         $("#quiz").append("<input type='radio' name='" + i +  "' value='c'> " + myQuestions[i].answers.c + "<br>");
         $("#quiz").append("<input type='radio' name='" + i +  "' value='d'> " + myQuestions[i].answers.d + "<br>");
+    }
+};
+
+function submitAndCheck() {
+    for (var i = 0; i < myQuestions.length; i++) {
         
     }
 };
+
+//create var for user answers and myQuestions.correctAnswer[i] where i = the corresponding correct answer that was submitted
+
+
 
 startGame();
 
