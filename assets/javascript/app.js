@@ -1,22 +1,47 @@
+// // runs code after a specific amount of time
+// setTimeout();
 
-// if buttonactive === answer, correct. else if no button active, unanswered. else,  incorrect
-//create variables for time, questions right, questions wrong, questions incomplete, etc.
-//create functions for start game(onClick), submit button (onClick), restart (onClick),  
 
+
+
+// // clears timeout
+// clearTimeout();
+// //runs code at a specific interval
+// setInterval();
+// // clears interval
+// clearInterval();
+
+
+// *****VARIABLES******
 
 //variable to reset timer on restart
-var timerReset = 60;
-var time = 6000;
+var timer;
+var time= 60;
+
+//function for timer
+
+timer = setInterval(function() {
+    time--;
+    $("#timeRemaining").text("Time Remaining: " + time);
+    if (time === 0) {
+        clearInterval(timer)
+        //***need to call on function for submitting answers */
+    }
+
+}, 1000)
+
+if (timer === 0) {
+    clearInterval(timer)
+    //***need to call on function for submitting answers */
+}
 // variable for collecting which radio buttons were active when the submit button is hit or the timer hits zero
+
+
 var userChoice
 var questionsRight
 var questionsWrong
 var questionsIncomplete
-// *****VARIABLES******
 
-//creating JS variables that correspond to the HTML elements
-// var quizContainer = document.getElementById("quiz");
-// var resultsContainer = document.getElementById("results");
 
 
 
@@ -128,6 +153,13 @@ var myQuestions = [
 ];
 
 // *******FUNCTIONS********
+
+// function for hiding start button div
+$("#startButton").click(function() {
+    $("#startGame").hide();
+    $("#jumbotron").show();
+    $(startGame).show();
+})
 
 //function for the submit button
 $("#submit").click(function() {

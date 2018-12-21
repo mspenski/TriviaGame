@@ -1,3 +1,14 @@
+/* start game div with button that disappears when user clicks start */
+#startGame {
+    background: white;
+    width: 100%;
+    height: 100px;
+}
+/* start game button */
+/* #startButton {
+    color: black;
+} */
+
 /* main container */
 .jumbotron {
     width: 70%;
@@ -12,7 +23,4 @@
 body {
     background-image: url("../images/ballsbackground.jpg");
     width: 100%;
-
-
-
 }
