@@ -1,3 +1,11 @@
+$(function () {
+    $("#startGame").show();
+    $(".jumbotron").hide();
+    $(startGame).show();
+})
+
+
+
 // // runs code after a specific amount of time
 // setTimeout();
 
@@ -16,46 +24,17 @@
 
 //variable to reset timer on restart
 var timer;
-var time= 60;
-
-//function for timer
-
-timer = setInterval(function() {
-    time--;
-    $("#timeRemaining").text("Time Remaining: " + time);
-    if (time === 0) {
-        clearInterval(timer)
-        //***need to call on function for submitting answers */
-    }
-
-}, 1000)
-
-if (timer === 0) {
-    clearInterval(timer)
-    //***need to call on function for submitting answers */
-}
-// variable for collecting which radio buttons were active when the submit button is hit or the timer hits zero
-
-
+var time = 5;
 var userChoice
+var correctAnswer
 var questionsRight
 var questionsWrong
 var questionsIncomplete
 
 
 
-
-
-// user clicks a button to start the game
-// start game fuction runs
-// questiions and timer show and timer starts decreasing
-// user clicks radio buttons for answer choice
-// game ends when timer runs out or user clicks submit
-// function runs to grade responses
-// update results to html
-// unhide results div
-
-
+// variable for collecting which radio buttons were active when the submit button is hit or the timer hits zero
+function submit() { }
 
 // Questions Array
 
@@ -154,34 +133,60 @@ var myQuestions = [
 
 // *******FUNCTIONS********
 
+//function for timer
+
+timer = setInterval(function () {
+    time--;
+    $("#timeRemaining").text("Time Remaining: " + time);
+    if (time === 0) {
+        clearInterval(timer)
+        //***need to call on function for submitting answers */
+    }
+
+}, 1000)
+
+if (timer === 0) {
+    clearInterval(timer)
+    //***need to call on function for submitting answers */
+}
 // function for hiding start button div
-$("#startButton").click(function() {
-    $("#startGame").hide();
-    $("#jumbotron").show();
-    $(startGame).show();
+$("#startButton").click(function () {
+    $("#startButton").hide();
+    $(".jumbotron").show();
 })
 
+
+
 //function for the submit button
-$("#submit").click(function() {
-    console.log("submit button")
+function submit() {
+    if (userChoice !== correctAnswer) {
+        questionsWrong++;
+        console.log(questionsWrong)
+        $("#").text(questionsWrong);
+    } else if (userChoice === correctAnswer) {
+        questionsRight++;
+        $("#").text(questionsRight);
+    }
+
+};
+
+$("#submit").click(function () {
+    console.log("submit button");
+    submit();
 });
 
 //function for starting game and displaying time and questions
 function startGame() {
     for (var i = 0; i < myQuestions.length; i++) {
         $("#quiz").append(myQuestions[i].question + "<br>");
-        $("#quiz").append("<input type='radio' name='" + i +  "' value='a'> " + myQuestions[i].answers.a + "<br>");
-        $("#quiz").append("<input type='radio' name='" + i +  "' value='b'> " + myQuestions[i].answers.b + "<br>");
-        $("#quiz").append("<input type='radio' name='" + i +  "' value='c'> " + myQuestions[i].answers.c + "<br>");
-        $("#quiz").append("<input type='radio' name='" + i +  "' value='d'> " + myQuestions[i].answers.d + "<br>");
+        $("#quiz").append("<input type='radio' name='" + i + "' value='a'> " + myQuestions[i].answers.a + "<br>");
+        $("#quiz").append("<input type='radio' name='" + i + "' value='b'> " + myQuestions[i].answers.b + "<br>");
+        $("#quiz").append("<input type='radio' name='" + i + "' value='c'> " + myQuestions[i].answers.c + "<br>");
+        $("#quiz").append("<input type='radio' name='" + i + "' value='d'> " + myQuestions[i].answers.d + "<br>");
     }
 };
 
-function submitAndCheck() {
-    for (var i = 0; i < myQuestions.length; i++) {
-        
-    }
-};
+
 
 //create var for user answers and myQuestions.correctAnswer[i] where i = the corresponding correct answer that was submitted
 

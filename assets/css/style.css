@@ -5,9 +5,13 @@
     height: 100px;
 }
 /* start game button */
-/* #startButton {
-    color: black;
-} */
+#startButton {
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 200px;
+    padding: 40px;
+    
+}
 
 /* main container */
 .jumbotron {
