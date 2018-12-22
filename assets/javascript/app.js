@@ -24,7 +24,7 @@ $(function () {
 
 //variable to reset timer on restart
 var timer;
-var time = 5;
+var time = 60;
 var userChoice
 var correctAnswer
 var questionsRight
@@ -169,7 +169,7 @@ function submit() {
     }
 
 };
-
+// function call for the start button
 $("#submit").click(function () {
     console.log("submit button");
     submit();
@@ -190,7 +190,7 @@ function startGame() {
 
 //create var for user answers and myQuestions.correctAnswer[i] where i = the corresponding correct answer that was submitted
 
-
+// ********Function Calls*********
 
 startGame();
 
