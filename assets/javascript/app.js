@@ -11,7 +11,7 @@ $(function (reset) {
 
 //variable to reset timer on restart
 var timer;
-var time = 60;
+var time = 30;
 var userChoice = 0;
 var correctAnswer
 var questionsRight = 0;
@@ -136,12 +136,6 @@ timer = setInterval(function () {
 
 //function for timer
 
-
-//***need to call on function for submitting answers */
-
-
-
-
 if (timer === 0) {
     clearInterval(timer);
     endgame();
@@ -156,7 +150,6 @@ function endgame() {
         console.log($("input[value='" + myQuestions[i].correctAnswer + "'][name='" + i + "']").checked)
         if ($("input[name=" + i + "]:checked").val() === myQuestions[i].correctAnswer) {
             questionsRight++
-            console.log("if statmejkadjfgbjkafg")
         }
 
     }
@@ -176,7 +169,7 @@ function endgame() {
 
 }
 
-// function call for the start button
+// function call for the submit button
 $("#submit").click(function () {
     console.log("submit button");
     endgame();
@@ -210,18 +203,5 @@ $("#Retry").click(function () {
 
 
 
-//create var for user answers and myQuestions.correctAnswer[i] where i = the corresponding correct answer that was submitted
-
-// ********Function Calls*********
-
-
-
-
-//this function will show questions and 
-// function startGame 
-// function reset counters
-// function restartgame
-// function gradeResults // if right=correct else = incorrect
-// //make div of results disappear and reset results and timer. 
 
 
