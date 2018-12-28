@@ -24,22 +24,25 @@
         <h3 id="timeRemaining">Time Remaining: </h3>
         <p class="lead">Quiz</p>
         <hr class="my-4">
-        
-
-        
-
+    
         <div id="quizDiv"></div>
-            
             <!-- form for the quiz questions and answers to pop up in so that the button states can be monitored -->
             <form id="quiz"></form>
-
-
-        <div id="results"></div>
+        
         
         <hr>
 
         <a class="btn btn-primary btn-lg" id="submit" href="#" role="button">Submit</a>
+    
+
     </div>
+
+    <div id="results"> 
+        <h1>Correct Answers: <span id="correctanswers"></span></h1>
+        <h1>Incorrect Answers: <span id="incorrectanswers"></span></h1>
+      <button id="Retry">Retry Quiz</button>
+    </div>
+
 
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>

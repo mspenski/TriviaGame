@@ -33,3 +33,16 @@ body {
     background-image: url("../images/ballsbackground.jpg");
     width: 100%;
 }
+
+#results {
+    position: absolute;
+    margin-left: 40%;
+    font-size: 80px;
+    margin-top: 200px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    
+}
